@@ -1,0 +1,43 @@
+{
+  "tipoDoc": "01",
+  "serie": "F001",
+  "correlativo": 1234,
+  "fechaEmision": "2026-04-02",
+  "moneda": "PEN",
+  "receptor": {
+    "tipoDoc": "6",
+    "numDoc": "20100039207",
+    "razonSocial": "EMPRESA RECEPTORA SAC",
+    "address": {
+      "direccion": "Av. Lima 123",
+      "codigoPais": "PE",
+      "codLocal": "0000"
+    }
+  },
+  "detalle": [
+    {
+      "cantidad": 2,
+      "unidad": "NIU",
+      "descripcion": "Producto ejemplo",
+      "precioUnitario": 118,
+      "valorUnitario": 100,
+      "igv": 36,
+      "subtotal": 200,
+      "tipoAfectacionIgv": "10"
+    }
+  ],
+  "totales": {
+    "gravadas": 200,
+    "inafectas": 0,
+    "exoneradas": 0,
+    "exportacion": 0,
+    "gratuitas": 0,
+    "igv": 36,
+    "isc": 0,
+    "otrosTributos": 0,
+    "otrosCargos": 0,
+    "icbper": 0,
+    "importeTotal": 236
+  }
+}
+

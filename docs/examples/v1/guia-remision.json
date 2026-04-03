@@ -1,0 +1,41 @@
+{
+  "serie": "T001",
+  "correlativo": "121",
+  "fechaEmision": "2026-04-03",
+  "destinatario": {
+    "tipoDoc": "6",
+    "numDoc": "20000000002",
+    "razonSocial": "EMPRESA DEST 1"
+  },
+  "envio": {
+    "codTraslado": "01",
+    "modTraslado": "01",
+    "fechaTraslado": "2026-04-03",
+    "pesoTotal": 12.5,
+    "undPesoTotal": "KGM",
+    "llegada": {
+      "ubigeo": "150101",
+      "direccion": "AV LIMA",
+      "codLocal": "0000"
+    },
+    "partida": {
+      "ubigeo": "150203",
+      "direccion": "AV ITALIA",
+      "codLocal": "0000"
+    },
+    "transportista": {
+      "tipoDoc": "6",
+      "numDoc": "20000000002",
+      "razonSocial": "TRANSPORTES S.A.C",
+      "nroMtc": "0001"
+    }
+  },
+  "detalles": [
+    {
+      "codigo": "PROD1",
+      "descripcion": "PROD 1",
+      "unidad": "ZZ",
+      "cantidad": 2
+    }
+  ]
+}

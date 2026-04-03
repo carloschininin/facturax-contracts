@@ -1,0 +1,45 @@
+{
+  "tipoDoc": "07",
+  "serie": "FC01",
+  "correlativo": "123",
+  "fechaEmision": "2026-04-03",
+  "tipoDocAfectado": "01",
+  "numeroDocAfectado": "F001-111",
+  "codMotivo": "07",
+  "descripcionMotivo": "DEVOLUCION POR ITEM",
+  "moneda": "PEN",
+  "receptor": {
+    "tipoDoc": "6",
+    "numDoc": "20100039207",
+    "razonSocial": "EMPRESA RECEPTORA SAC"
+  },
+  "detalle": [
+    {
+      "codigo": "C023",
+      "unidad": "NIU",
+      "cantidad": 2,
+      "descripcion": "PROD 1",
+      "valorUnitario": 50,
+      "baseIgv": 100,
+      "porcentajeIgv": 18,
+      "igv": 18,
+      "tipoAfectacionIgv": "10",
+      "totalImpuestos": 18,
+      "valorVenta": 100,
+      "precioUnitario": 56
+    }
+  ],
+  "leyendas": [
+    {
+      "code": "1000",
+      "value": "SON DOSCIENTOS TREINTA Y SEIS CON 00/100 SOLES"
+    }
+  ],
+  "totales": {
+    "gravadas": 200,
+    "igv": 36,
+    "totalImpuestos": 36,
+    "valorVenta": 200,
+    "importeTotal": 236
+  }
+}

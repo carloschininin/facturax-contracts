@@ -1,0 +1,35 @@
+{
+    "name": "carloschininin/facturax-contracts",
+    "description": "Contratos DTO versionados y bundle Symfony opcional para la API de Facturax.",
+    "type": "symfony-bundle",
+    "license": "proprietary",
+    "require": {
+        "php": "^8.5",
+        "symfony/config": "^8.0",
+        "symfony/dependency-injection": "^8.0",
+        "symfony/http-kernel": "^8.0",
+        "symfony/serializer": "^8.0",
+        "symfony/validator": "^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "CarlosChininin\\FacturaxContracts\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CarlosChininin\\FacturaxContracts\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "symfony": {
+            "bundle": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
+

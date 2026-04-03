@@ -1,0 +1,19 @@
+{
+  "correlativo": "001",
+  "fechaGeneracion": "2026-04-01",
+  "fechaComunicacion": "2026-04-03",
+  "detalles": [
+    {
+      "tipoDoc": "20",
+      "serie": "R001",
+      "correlativo": "122",
+      "motivo": "ERROR DE SISTEMA"
+    },
+    {
+      "tipoDoc": "40",
+      "serie": "P001",
+      "correlativo": "111",
+      "motivo": "ERROR DE RUC"
+    }
+  ]
+}

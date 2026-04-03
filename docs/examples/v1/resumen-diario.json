@@ -1,0 +1,28 @@
+{
+  "correlativo": "1",
+  "fechaGeneracion": "2026-04-02",
+  "fechaResumen": "2026-04-03",
+  "moneda": "PEN",
+  "detalles": [
+    {
+      "tipoDoc": "03",
+      "serieNro": "B001-123",
+      "clienteTipo": "1",
+      "clienteNro": "45879632",
+      "estado": "1",
+      "total": 118,
+      "mtoOperGravadas": 100,
+      "mtoOperInafectas": 0,
+      "mtoOperExoneradas": 0,
+      "mtoOperExportacion": 0,
+      "mtoOperGratuitas": 0,
+      "mtoOtrosCargos": 0,
+      "mtoIGV": 18,
+      "mtoIvap": 0,
+      "mtoISC": 0,
+      "mtoOtrosTributos": 0,
+      "mtoIcbper": 0
+    }
+  ]
+}
+

@@ -1,0 +1,40 @@
+{
+  "serie": "R001",
+  "correlativo": "123",
+  "fechaEmision": "2026-04-03",
+  "observacion": "NOTA DE RETENCION",
+  "proveedor": {
+    "tipoDoc": "6",
+    "numDoc": "20100039207",
+    "razonSocial": "EMPRESA PROVEEDORA SAC"
+  },
+  "regimen": "01",
+  "tasa": 3,
+  "impRetenido": 10,
+  "impPagado": 200,
+  "detalles": [
+    {
+      "tipoDoc": "01",
+      "numDoc": "F001-1",
+      "fechaEmision": "2026-04-02",
+      "fechaRetencion": "2026-04-03",
+      "moneda": "PEN",
+      "impTotal": 210,
+      "impPagar": 200,
+      "impRetenido": 10,
+      "pagos": [
+        {
+          "moneda": "PEN",
+          "fecha": "2026-04-03",
+          "importe": 100
+        }
+      ],
+      "tipoCambio": {
+        "fecha": "2026-04-03",
+        "factor": 1,
+        "monedaObj": "PEN",
+        "monedaRef": "PEN"
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "correlativo": "1",
+  "fechaGeneracion": "2026-04-03",
+  "fechaBaja": "2026-04-02",
+  "detalles": [
+    {
+      "tipoDoc": "01",
+      "serie": "F001",
+      "correlativo": "123",
+      "motivo": "Error en datos del receptor"
+    }
+  ]
+}
+
