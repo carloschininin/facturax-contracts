@@ -21,6 +21,13 @@ final class GuiaRemisionRequestDtoTest extends TestCase
 {
     use CreatesValidator;
 
+    public function testDefaultVersionIsLegacyValueCompatibleWithCurrentSunatEndpoint(): void
+    {
+        $dto = new GuiaRemisionRequestDto();
+
+        self::assertSame('1.0', $dto->version);
+    }
+
     public function testValidGuiaRemisionRequestPassesValidation(): void
     {
         $destinatario = new ReceptorDto();

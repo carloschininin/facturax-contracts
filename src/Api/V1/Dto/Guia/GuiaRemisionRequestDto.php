@@ -16,7 +16,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 final class GuiaRemisionRequestDto
 {
     #[Assert\Length(max: 4)]
-    public string $version = '2022';
+    public string $version = '1.0';
 
     #[Assert\NotBlank]
     #[Assert\Choice(callback: [TipoDocumentoCatalog::class, 'despatch'])]
