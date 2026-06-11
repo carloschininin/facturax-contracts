@@ -60,6 +60,9 @@ final class NotaRequestDto
     #[Assert\Choice(callback: [MonedaCatalog::class, 'all'])]
     public string $moneda = 'PEN';
 
+    #[Assert\Length(min: 4, max: 4)]
+    public string $codLocalEmisor = '0000';
+
     #[Assert\NotNull]
     #[Assert\Valid]
     public ?ReceptorDto $receptor = null;

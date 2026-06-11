@@ -33,6 +33,9 @@ final class GuiaRemisionRequestDto
     #[Assert\Length(max: 500)]
     public ?string $observacion = null;
 
+    #[Assert\Length(min: 4, max: 4)]
+    public string $codLocalEmisor = '0000';
+
     #[Assert\NotBlank]
     #[Assert\Date]
     public ?string $fechaEmision = null;
