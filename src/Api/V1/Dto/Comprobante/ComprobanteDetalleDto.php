@@ -21,10 +21,22 @@ final class ComprobanteDetalleDto
     #[Assert\Length(max: 50)]
     public ?string $codigo = null;
 
-    #[Assert\Length(max: 50)]
+    /**
+     * Código del Catálogo 25 de SUNAT (UNSPSC v14_0801): exactamente 8 dígitos.
+     */
+    #[Assert\Regex(
+        pattern: '/^\d{8}$/',
+        message: 'El código SUNAT debe tener exactamente 8 dígitos (Catálogo 25 - UNSPSC v14_0801).',
+    )]
     public ?string $codigoSunat = null;
 
-    #[Assert\Length(max: 50)]
+    /**
+     * Código GTIN de GS1: 8, 12, 13 o 14 dígitos. No es un código UNSPSC.
+     */
+    #[Assert\Regex(
+        pattern: '/^(\d{8}|\d{12,14})$/',
+        message: 'El código GS1 debe ser un GTIN numérico de 8, 12, 13 o 14 dígitos.',
+    )]
     public ?string $codigoGs1 = null;
 
     #[Assert\NotBlank]

@@ -28,6 +28,16 @@ final class GuiaRemisionDetalleDto
     #[Assert\Positive]
     public ?float $cantidad = null;
 
+    /**
+     * Código del Catálogo 25 de SUNAT (UNSPSC v14_0801): exactamente 8 dígitos.
+     */
+    #[Assert\Regex(
+        pattern: '/^\d{8}$/',
+        message: 'El código SUNAT debe tener exactamente 8 dígitos (Catálogo 25 - UNSPSC v14_0801).',
+    )]
+    public ?string $codigoSunat = null;
+
+    /** @deprecated mantener por compatibilidad, usar codigoSunat */
     #[Assert\Length(max: 50)]
     public ?string $codProdSunat = null;
 
