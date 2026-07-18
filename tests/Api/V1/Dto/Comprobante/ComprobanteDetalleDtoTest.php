@@ -33,22 +33,24 @@ final class ComprobanteDetalleDtoTest extends TestCase
         self::assertCount(0, $this->createValidator()->validate($detalle));
     }
 
-    #[DataProvider('codigosSunatInvalidos')]
-    public function testCodigoSunatConFormatoInvalidoGeneraViolacion(string $codigo): void
+    /**
+     * El formato UNSPSC de 8 dígitos NO se exige todavía (ver docblock del DTO):
+     * los emisores en producción envían códigos alfanuméricos libres y deben
+     * seguir siendo aceptados.
+     */
+    #[DataProvider('codigosSunatFueraDelFormatoUnspsc')]
+    public function testCodigoSunatFueraDelFormatoUnspscSigueSiendoValido(string $codigo): void
     {
         $detalle = $this->createDetalleValido();
         $detalle->codigoSunat = $codigo;
 
-        $violaciones = $this->createValidator()->validate($detalle);
-
-        self::assertCount(1, $violaciones);
-        self::assertSame('codigoSunat', $violaciones->get(0)->getPropertyPath());
+        self::assertCount(0, $this->createValidator()->validate($detalle));
     }
 
     /**
      * @return iterable<string, array{string}>
      */
-    public static function codigosSunatInvalidos(): iterable
+    public static function codigosSunatFueraDelFormatoUnspsc(): iterable
     {
         yield 'letras' => ['ABC'];
         yield 'muy corto' => ['1234'];
@@ -84,22 +86,23 @@ final class ComprobanteDetalleDtoTest extends TestCase
         yield 'gtin-14' => ['12345678901231'];
     }
 
-    #[DataProvider('codigosGs1Invalidos')]
-    public function testCodigoGs1ConFormatoInvalidoGeneraViolacion(string $codigo): void
+    /**
+     * El formato GTIN tampoco se exige todavía: se documenta el comportamiento
+     * laxo actual para que un endurecimiento futuro sea un cambio explícito.
+     */
+    #[DataProvider('codigosGs1FueraDelFormatoGtin')]
+    public function testCodigoGs1FueraDelFormatoGtinSigueSiendoValido(string $codigo): void
     {
         $detalle = $this->createDetalleValido();
         $detalle->codigoGs1 = $codigo;
 
-        $violaciones = $this->createValidator()->validate($detalle);
-
-        self::assertCount(1, $violaciones);
-        self::assertSame('codigoGs1', $violaciones->get(0)->getPropertyPath());
+        self::assertCount(0, $this->createValidator()->validate($detalle));
     }
 
     /**
      * @return iterable<string, array{string}>
      */
-    public static function codigosGs1Invalidos(): iterable
+    public static function codigosGs1FueraDelFormatoGtin(): iterable
     {
         yield 'diez digitos' => ['1234567890'];
         yield 'once digitos' => ['12345678901'];

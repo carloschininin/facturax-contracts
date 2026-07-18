@@ -54,22 +54,24 @@ final class GuiaRemisionDetalleDtoTest extends TestCase
         self::assertCount(0, $this->createValidator()->validate($detalle));
     }
 
-    #[DataProvider('codigosSunatInvalidos')]
-    public function testCodigoSunatConFormatoInvalidoGeneraViolacion(string $codigo): void
+    /**
+     * El formato UNSPSC de 8 dígitos NO se exige todavía (ver docblock del DTO):
+     * los emisores en producción envían códigos alfanuméricos libres y deben
+     * seguir siendo aceptados.
+     */
+    #[DataProvider('codigosSunatFueraDelFormatoUnspsc')]
+    public function testCodigoSunatFueraDelFormatoUnspscSigueSiendoValido(string $codigo): void
     {
         $detalle = $this->createDetalleValido();
         $detalle->codigoSunat = $codigo;
 
-        $violaciones = $this->createValidator()->validate($detalle);
-
-        self::assertCount(1, $violaciones);
-        self::assertSame('codigoSunat', $violaciones->get(0)->getPropertyPath());
+        self::assertCount(0, $this->createValidator()->validate($detalle));
     }
 
     /**
      * @return iterable<string, array{string}>
      */
-    public static function codigosSunatInvalidos(): iterable
+    public static function codigosSunatFueraDelFormatoUnspsc(): iterable
     {
         yield 'letras' => ['ABC'];
         yield 'muy corto' => ['1234'];
