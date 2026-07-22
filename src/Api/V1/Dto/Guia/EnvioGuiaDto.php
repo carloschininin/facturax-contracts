@@ -46,6 +46,9 @@ final class EnvioGuiaDto
     #[Assert\Date]
     public ?string $fechaTraslado = null;
 
+    #[Assert\Date]
+    public ?string $fechaEntregaBienes = null;
+
     #[Assert\Length(max: 50)]
     public ?string $numContenedor = null;
 
