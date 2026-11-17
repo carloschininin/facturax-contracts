@@ -1,0 +1,45 @@
+{
+  "tipoDoc": "04",
+  "tipoOperacion": "0501",
+  "serie": "L001",
+  "correlativo": 1,
+  "fechaEmision": "2026-11-17",
+  "moneda": "PEN",
+  "vendedor": {
+    "tipoDoc": "1",
+    "numDoc": "12345678",
+    "nombres": "PEREZ GARCIA JUAN",
+    "domicilio": {
+      "ubigeo": "060801",
+      "direccion": "CASERIO LA PALMA S/N",
+      "condicion": "02"
+    }
+  },
+  "lugarOperacion": {
+    "ubigeo": "060801",
+    "direccion": "AV. PRINCIPAL 123 - ALMACEN JAEN",
+    "condicion": "01"
+  },
+  "detalle": [
+    {
+      "codigo": "CAF-PERG",
+      "unidad": "KGM",
+      "descripcion": "CAFE PERGAMINO",
+      "cantidad": 1000.0,
+      "valorUnitario": 12.0,
+      "tipoAfectacionIgv": "20",
+      "valorVenta": 12000.0,
+      "igv": 0.0,
+      "retencionIr": 180.0
+    }
+  ],
+  "totales": {
+    "exoneradas": 12000.0,
+    "valorVenta": 12000.0,
+    "igv": 0.0,
+    "porcentajeRetencionIr": 1.5,
+    "retencionIr": 180.0,
+    "importeTotal": 12000.0,
+    "netoPagar": 11820.0
+  }
+}

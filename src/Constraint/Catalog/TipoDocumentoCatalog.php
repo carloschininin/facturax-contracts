@@ -15,7 +15,7 @@ final class TipoDocumentoCatalog
      */
     public static function all(): array
     {
-        return ['01', '03', '07', '08', '09', '20', '40'];
+        return ['01', '03', '04', '07', '08', '09', '20', '40'];
     }
 
     /**
@@ -24,6 +24,16 @@ final class TipoDocumentoCatalog
     public static function sale(): array
     {
         return ['01', '03'];
+    }
+
+    /**
+     * Liquidación de compra electrónica (catálogo 01 de SUNAT).
+     *
+     * @return list<string>
+     */
+    public static function liquidacion(): array
+    {
+        return ['04'];
     }
 
     /**

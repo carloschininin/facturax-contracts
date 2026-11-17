@@ -45,6 +45,10 @@ Servicios incluidos:
 - `Api\V1\Dto\Comprobante\ComprobanteRequestDto`
 - `Api\V1\Dto\Nota\NotaRequestDto`
 
+### Compra
+- `Api\V1\Dto\Liquidacion\LiquidacionCompraRequestDto` (liquidación de compra electrónica, tipo 04, serie `L###`;
+  vendedor sin RUC con domicilio y lugar de la operación, retención de IR y neto a pagar)
+
 ### Resúmenes y anulaciones
 - `Api\V1\Dto\Resumen\ResumenDiarioRequestDto`
 - `Api\V1\Dto\Baja\ComunicacionBajaRequestDto`
@@ -81,6 +85,7 @@ Ver `docs/examples/v1/`:
 - `percepcion.json`
 - `retencion.json`
 - `reversion.json`
+- `liquidacion-compra.json`
 
 ## Testing
 
