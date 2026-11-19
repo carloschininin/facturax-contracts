@@ -33,6 +33,13 @@ final class ResumenDiarioDetalleDto
     #[Assert\Length(max: 20)]
     public ?string $clienteNro = null;
 
+    /**
+     * Apellidos y nombres, denominación o razón social del adquiriente (campo 10.3 del resumen diario,
+     * RS 000048-2026/SUNAT). Opcional: desde el 01/01/2027 SUNAT lo exige si la boleta tiene ese dato.
+     */
+    #[Assert\Length(max: 250)]
+    public ?string $clienteNombre = null;
+
     #[Assert\Valid]
     public ?DocumentoReferenciaDto $docReferencia = null;
 

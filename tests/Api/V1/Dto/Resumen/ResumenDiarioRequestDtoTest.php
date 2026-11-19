@@ -24,6 +24,7 @@ final class ResumenDiarioRequestDtoTest extends TestCase
         $detalle->serieNro = 'B001-123';
         $detalle->clienteTipo = '1';
         $detalle->clienteNro = '45879632';
+        $detalle->clienteNombre = 'JUAN PÉREZ GARCÍA';
         $detalle->estado = '1';
         $detalle->total = 118;
         $detalle->mtoOperGravadas = 100;
@@ -65,5 +66,14 @@ final class ResumenDiarioRequestDtoTest extends TestCase
 
         self::assertGreaterThan(0, \count($violations));
     }
-}
 
+    public function testClienteNombreMayorA250CaracteresFallaValidacion(): void
+    {
+        $detalle = new ResumenDiarioDetalleDto();
+        $detalle->clienteNombre = str_repeat('A', 251);
+
+        $violations = $this->createValidator()->validateProperty($detalle, 'clienteNombre');
+
+        self::assertCount(1, $violations);
+    }
+}
